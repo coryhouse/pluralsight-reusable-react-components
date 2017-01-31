@@ -2,8 +2,8 @@ import React from 'react';
 import { storiesOf, action, linkTo } from '@kadira/storybook';
 import TextInput from '../TextInput/TextInput';
 import ProgressBar from '../ProgressBar/ProgressBar';
-import PasswordInput from '../PasswordInput/PasswordInput';
-import RegistrationFormContainer from '../RegistrationFormContainer/RegistrationFormContainer';
+import PasswordInputContainer from '../PasswordInput/PasswordInputContainer';
+import RegistrationFormContainer from '../RegistrationForm/RegistrationFormContainer';
 
 storiesOf('Atom.TextInput', module)
   // Note that the maxLength gets passed through via object spread operator in TextInput
@@ -39,52 +39,41 @@ storiesOf('Atom.ProgressBar', module)
 
 storiesOf('Molecule.PasswordInput', module)
   .add('simple', () => (
-    <PasswordInput
-      maxLength={20}
-      value="">
-    </PasswordInput>
+    <PasswordInputContainer
+      maxLength={20} />
   ))
   .add('with placeholder', () => (
-    <PasswordInput
+    <PasswordInputContainer
       placeholder="Enter password"
-      maxLength={20}>
-    </PasswordInput>
+      maxLength={20} />
   ))
   .add('with show password', () => (
-    <PasswordInput
+    <PasswordInputContainer
       placeholder="Enter password"
       showVisibilityToggle={true}
-      maxLength={20}>
-    </PasswordInput>
+      maxLength={20} />
   ))
   .add('with password quality', () => (
-    <PasswordInput
+    <PasswordInputContainer
       showQuality={true}
-      maxLength={20}>
-    </PasswordInput>
+      maxLength={20} />
   ))
   .add('with tips', () => (
-    <PasswordInput
+    <PasswordInputContainer
       placeholder="Enter password"
       showTips={true}
-      maxLength={20}>
-    </PasswordInput>
+      maxLength={20}
+      minLength={8} />
   ))
   .add('with everything enabled', () => (
-    <PasswordInput
+    <PasswordInputContainer
       placeholder="Enter password"
       showVisibilityToggle={true}
       showTips={true}
       showQuality={true}
       showTips={true}
-      minLength={5}
-      maxLength={20}>
-    </PasswordInput>
-  ))
-  .add('with logger HOC', () => (
-    <PasswordInputWithLogger
-      maxLength={50}
-      showTips={true} />
+      minLength={8}
+      maxLength={20} />
   ))
 
 storiesOf('Organisms.RegistrationForm', module)

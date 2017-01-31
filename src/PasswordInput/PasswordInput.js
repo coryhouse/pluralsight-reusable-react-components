@@ -94,7 +94,6 @@ PasswordInput.propTypes = {
   maxLength: PropTypes.number.isRequired,
   minLength: PropTypes.number,
   placeholder: PropTypes.string,
-  onPasswordEntry: PropTypes.func,
   showVisibilityToggle: PropTypes.bool,
   showQuality: PropTypes.bool,
   showTips: PropTypes.bool
