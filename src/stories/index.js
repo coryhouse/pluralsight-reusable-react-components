@@ -26,15 +26,15 @@ storiesOf('Atom.TextInput', module)
 
 storiesOf('Atom.ProgressBar', module)
   .add('Red at 10% complete', () => (
-    <ProgressBar percentComplete={10} />
+    <ProgressBar percent={10} />
   ))
 
   .add('Light green at 60% complete', () => (
-    <ProgressBar percentComplete={60} />
+    <ProgressBar percent={60} />
   ))
 
   .add('Dark green at 100% complete', () => (
-    <ProgressBar percentComplete={100} />
+    <ProgressBar percent={100} />
   ));
 
 storiesOf('Molecule.PasswordInput', module)
