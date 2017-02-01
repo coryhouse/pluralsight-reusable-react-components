@@ -14,6 +14,7 @@ class PasswordInputContainer extends React.Component {
     return (
       <div>
         <PasswordInput
+          name="password"
           onChange={(event) => this.setState({password: event.target.value})}
           value={this.state.password}
           {...this.props} />

@@ -70,7 +70,7 @@ class PasswordInput extends React.Component {
 
         {
           showQuality && password &&
-          <ProgressBar percentComplete={score} />
+          <ProgressBar percent={score} />
         }
 
         {
