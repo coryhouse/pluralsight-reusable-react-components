@@ -1,24 +1,51 @@
 {
   "name": "pluralsight-reusable-react-components",
+  "description": "Reusuable React Components",
   "version": "0.1.0",
+  "author": "Cory House (housecor@gmail.com)",
   "private": true,
-  "devDependencies": {
-    "@kadira/storybook": "^2.21.0",
-    "enzyme": "^2.7.1",
-    "react-addons-test-utils": "^15.4.2",
-    "react-scripts": "0.8.5",
-    "storybook": "0.0.0"
-  },
-  "dependencies": {
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+  "main": "build/index.js",
+  "homepage": "https://github.com/coryhouse/pluralsight-reusable-react-components",
+  "repository": {
+    "type": "git",
+    "url": "coryhouse/pluralsight-reusable-react-components"
   },
   "scripts": {
     "start": "npm run storybook",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "coverage": "node --harmony_proxies node_modules/.bin/jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
-  }
+    "build-storybook": "build-storybook -s public",
+    "pkgfiles": "pkgfiles"
+  },
+  "peerDependencies": {
+    "react": "^0.14.0 || ^15.0.0",
+    "react-dom": "^0.14.0 || ^15.0.0"
+  },
+  "devDependencies": {
+    "@kadira/storybook": "^2.21.0",
+    "coveralls": "^2.11.15",
+    "enzyme": "^2.7.1",
+    "jest": "^18.1.0",
+    "jest-cli": "^18.1.0",
+    "pkgfiles": "^2.3.2",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-addons-test-utils": "^15.4.2",
+    "react-scripts": "0.8.5",
+    "storybook": "0.0.0"
+  },
+  "dependencies": {
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "loading",
+    "loading-bar",
+    "progress",
+    "progress-bar",
+    "react-component"
+  ]
 }
