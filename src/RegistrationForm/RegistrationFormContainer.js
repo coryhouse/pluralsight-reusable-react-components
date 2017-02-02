@@ -18,24 +18,28 @@ class RegistrationFormContainer extends React.Component {
   }
 
   onChange(event) {
-    const user = this.state.user;
+    debugger;
+    const {user} = this.state;
     user[event.target.name] = event.target.value;
-    this.setState({user: this.state.user});
+    this.setState({ user: user });
   }
 
   validate() {
     const errors = {};
-    const user = this.state.user;
+    const {user} = this.state;
     if (!user.email) {
       errors.email = 'Email is required.';
     }
+    if (!user.password) {
+      errors.password = 'Password is required.';
+    }
 
-    this.setState({errors: errors});
+    this.setState({ errors: errors });
   }
 
   onSubmit() {
     this.validate();
-    // for simplicity, just logging. In real app, would call api.
+    // for simplicity, just logging. In real app, would call web api.
     console.log(this.state);
   }
 
@@ -48,7 +52,7 @@ class RegistrationFormContainer extends React.Component {
           onChange={this.onChange}
           onSubmit={this.onSubmit}
           errors={this.state.errors} />
-     </div>
+      </div>
     )
   }
 }
