@@ -10,19 +10,19 @@ const RegistrationForm = ({email, errors, password, onChange, onSubmit}) => {
         onChange={onChange}
         label="Email"
         value={email}
-        error={errors ? errors.email : ''} />
+        error={errors.email} />
 
-      <div>
-        <label htmlFor="password">Password</label><br/>
-        <PasswordInput
-          name="password"
-          value={password}
-          onChange={onChange}
-          showQuality={true}
-          showTips={true}
-          showVisibilityToggle={true}
-          maxLength={50} />
-      </div>
+      <label for="password">Password</label>
+      <PasswordInput
+        name="password"
+        value={password}
+        onChange={onChange}
+        showQuality={true}
+        showTips={true}
+        showVisibilityToggle={true}
+        minLength={7}
+        maxLength={50}
+        error={errors.password} />
 
       <div>
         <input type="submit" value="Register" onClick={onSubmit} />
