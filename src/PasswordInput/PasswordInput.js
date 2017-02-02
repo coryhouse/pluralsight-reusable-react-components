@@ -42,7 +42,7 @@ class PasswordInput extends React.Component {
 
     return (
       <div>
-        <div style={{ float: 'left', width: 150 }}>
+        <div style={{ float: 'left', width: 165 }}>
           <input
             type={showPassword ? 'text' : 'password'}
             placeholder={placeholder || ''}
@@ -53,19 +53,23 @@ class PasswordInput extends React.Component {
             {...props} />
           {
             showVisibilityToggle &&
-            <a href="#" onClick={this.toggleShowPassword}><EyeIcon /></a>
+            <a
+              href="#"
+              onClick={this.toggleShowPassword}
+              style={{marginLeft: 5}}>
+              <EyeIcon />
+            </a>
           }
           <br />
           {error && <div style={{ color: 'red' }}>{error}</div>}
           {
-            showQuality && password &&
-            <ProgressBar percent={score} />
+            showQuality && password.length > 0 && <ProgressBar percent={score} />
           }
         </div>
         <div style={{ float: 'left', width: 300 }}>
           {
             showTips &&
-            <ul>
+            <ul style={{listStyle: 'none', paddingLeft: 0, marginTop: 0}}>
               {!containsAlpha && <li>Add alphabetical character.</li>}
               {!containsNumber && <li>Add number.</li>}
               {!containsSpecialChar && <li>Add special character.</li>}
