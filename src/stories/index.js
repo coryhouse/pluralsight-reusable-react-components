@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles.css';
 import { storiesOf, action, linkTo } from '@kadira/storybook';
 import TextInput from '../TextInput/TextInput';
 import ProgressBar from '../ProgressBar/ProgressBar';

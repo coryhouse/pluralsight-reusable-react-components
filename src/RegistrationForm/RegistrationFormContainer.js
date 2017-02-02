@@ -28,10 +28,10 @@ class RegistrationFormContainer extends React.Component {
     const errors = {};
     const {user} = this.state;
     if (!user.email) {
-      errors.email = 'Email is required.';
+      errors.email = 'Email required.';
     }
     if (!user.password) {
-      errors.password = 'Password is required.';
+      errors.password = 'Password required.';
     }
 
     this.setState({ errors: errors });

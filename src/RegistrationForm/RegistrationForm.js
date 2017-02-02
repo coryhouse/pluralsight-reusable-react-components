@@ -12,7 +12,6 @@ const RegistrationForm = ({email, errors, password, onChange, onSubmit}) => {
         value={email}
         error={errors.email} />
 
-      <label htmlFor="password">Password</label>
       <PasswordInput
         name="password"
         value={password}
@@ -23,7 +22,6 @@ const RegistrationForm = ({email, errors, password, onChange, onSubmit}) => {
         minLength={7}
         maxLength={50}
         error={errors.password} />
-
       <div>
         <input type="submit" value="Register" onClick={onSubmit} />
       </div>

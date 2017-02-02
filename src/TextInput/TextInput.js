@@ -1,5 +1,4 @@
 import React, {PropTypes} from 'react';
-import styles from '../styles';
 
 const TextInput = ({name, label, onChange, placeholder, value, error, ...props}) => {
   let inputStyle = {};
@@ -10,7 +9,7 @@ const TextInput = ({name, label, onChange, placeholder, value, error, ...props})
   }
 
   return (
-    <div>
+    <div className="fieldset">
       <label htmlFor={name}>{label}</label>
       <div className="field">
         <input

@@ -41,8 +41,9 @@ class PasswordInput extends React.Component {
     const score = this.calculateScore(containsAlpha, containsNumber, containsSpecialChar);
 
     return (
-      <div>
+      <div className="fieldset">
         <div style={{ float: 'left', width: 165 }}>
+          <label htmlFor={name}>Password</label>
           <input
             type={showPassword ? 'text' : 'password'}
             placeholder={placeholder || ''}
@@ -68,8 +69,8 @@ class PasswordInput extends React.Component {
         </div>
         <div style={{ float: 'left', width: 300 }}>
           {
-            showTips &&
-            <ul style={{listStyle: 'none', paddingLeft: 0, marginTop: 0}}>
+            showTips && password.length > 0 &&
+            <ul className="unstyled">
               {!containsAlpha && <li>Add alphabetical character.</li>}
               {!containsNumber && <li>Add number.</li>}
               {!containsSpecialChar && <li>Add special character.</li>}
