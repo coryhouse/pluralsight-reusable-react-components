@@ -12,7 +12,7 @@ const RegistrationForm = ({email, errors, password, onChange, onSubmit}) => {
         value={email}
         error={errors.email} />
 
-      <label for="password">Password</label>
+      <label htmlFor="password">Password</label>
       <PasswordInput
         name="password"
         value={password}
