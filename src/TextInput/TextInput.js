@@ -1,13 +1,16 @@
 import React, {PropTypes} from 'react';
+import styles from '../styles';
 
 const TextInput = ({name, label, onChange, placeholder, value, error, ...props}) => {
-  let wrapperClass = 'form-group';
+  let inputStyle = {};
   if (error && error.length > 0) {
-    wrapperClass += " " + 'has-error';
+    inputStyle = {
+      border: 'solid 1px red'
+     }
   }
 
   return (
-    <div className={wrapperClass}>
+    <div style={{paddingBottom: 15}}>
       <label htmlFor={name}>{label}</label>
       <div className="field">
         <input
@@ -17,8 +20,9 @@ const TextInput = ({name, label, onChange, placeholder, value, error, ...props})
           placeholder={placeholder}
           value={value}
           onChange={onChange}
+          style={inputStyle}
           {...props}/>
-        {error && <div className="alert alert-danger">{error}</div>}
+        {error && <div style={{ color: 'red'}}>{error}</div>}
       </div>
     </div>
   );
