@@ -10,7 +10,7 @@ const TextInput = ({name, label, onChange, placeholder, value, error, ...props})
   }
 
   return (
-    <div style={{paddingBottom: 15}}>
+    <div>
       <label htmlFor={name}>{label}</label>
       <div className="field">
         <input
