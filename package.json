@@ -12,10 +12,8 @@
   },
   "scripts": {
     "start": "npm run storybook",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "jest --env=jsdom",
     "coverage": "node --harmony_proxies node_modules/.bin/jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
-    "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
     "pkgfiles": "pkgfiles"
@@ -26,19 +24,18 @@
   },
   "devDependencies": {
     "@kadira/storybook": "^2.21.0",
+    "babel-preset-stage-1": "^6.22.0",
     "coveralls": "^2.11.15",
     "enzyme": "^2.7.1",
     "jest": "^18.1.0",
     "jest-cli": "^18.1.0",
     "pkgfiles": "^2.3.2",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2",
     "react-addons-test-utils": "^15.4.2",
-    "react-scripts": "0.8.5",
-    "storybook": "0.0.0"
+    "react-dom": "^15.4.2",
+    "storyshots": "^3.2.1"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "keywords": [
     "react",
     "redux",
@@ -47,5 +44,11 @@
     "progress",
     "progress-bar",
     "react-component"
-  ]
+  ],
+  "babel": {
+    "presets": [
+      "latest",
+      "react"
+    ]
+  }
 }

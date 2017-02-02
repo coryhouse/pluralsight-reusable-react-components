@@ -1,0 +1,488 @@
+exports[`Storyshots Atom.ProgressBar Dark green at 100% complete 1`] = `
+<div
+  style={
+    Object {
+      "border": "1px solid lightgray",
+      "height": 10,
+      "width": 100,
+    }
+  }>
+  <div
+    style={
+      Object {
+        "backgroundColor": "green",
+        "height": 10,
+        "width": 100,
+      }
+    } />
+</div>
+`;
+
+exports[`Storyshots Atom.ProgressBar Light green at 60% complete 1`] = `
+<div
+  style={
+    Object {
+      "border": "1px solid lightgray",
+      "height": 10,
+      "width": 100,
+    }
+  }>
+  <div
+    style={
+      Object {
+        "backgroundColor": "lightgreen",
+        "height": 10,
+        "width": 60,
+      }
+    } />
+</div>
+`;
+
+exports[`Storyshots Atom.ProgressBar Red at 10% complete 1`] = `
+<div
+  style={
+    Object {
+      "border": "1px solid lightgray",
+      "height": 10,
+      "width": 100,
+    }
+  }>
+  <div
+    style={
+      Object {
+        "backgroundColor": "red",
+        "height": 10,
+        "width": 10,
+      }
+    } />
+</div>
+`;
+
+exports[`Storyshots Atom.TextInput With placeholder 1`] = `
+<div
+  className="fieldset">
+  <label
+    htmlFor="name">
+    Name
+  </label>
+  <div
+    className="field">
+    <input
+      className="form-control"
+      maxLength={5}
+      name="name"
+      onChange={[Function]}
+      placeholder="Enter your name"
+      style={Object {}}
+      type="text"
+      value={undefined} />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Atom.TextInput Without placeholder 1`] = `
+<div
+  className="fieldset">
+  <label
+    htmlFor="name">
+    Name
+  </label>
+  <div
+    className="field">
+    <input
+      className="form-control"
+      maxLength={5}
+      name="name"
+      onChange={[Function]}
+      placeholder={undefined}
+      style={Object {}}
+      type="text"
+      value={undefined} />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Molecule.PasswordInput simple 1`] = `
+<div>
+  <div
+    className="fieldset">
+    <div
+      style={
+        Object {
+          "float": "left",
+          "width": 165,
+        }
+      }>
+      <label
+        htmlFor="password">
+        Password
+      </label>
+      <input
+        maxLength={20}
+        name="password"
+        onChange={[Function]}
+        placeholder=""
+        type="password"
+        value="" />
+      <br />
+    </div>
+    <div
+      style={
+        Object {
+          "float": "left",
+          "width": 300,
+        }
+      } />
+    <div
+      style={
+        Object {
+          "clear": "both",
+        }
+      } />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Molecule.PasswordInput with everything enabled 1`] = `
+<div>
+  <div
+    className="fieldset">
+    <div
+      style={
+        Object {
+          "float": "left",
+          "width": 165,
+        }
+      }>
+      <label
+        htmlFor="password">
+        Password
+      </label>
+      <input
+        maxLength={20}
+        name="password"
+        onChange={[Function]}
+        placeholder="Enter password"
+        type="password"
+        value="" />
+      <a
+        href="#"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginLeft": 5,
+          }
+        }>
+        <svg
+          viewBox="0 0 22 22"
+          width="16"
+          xmlns="http://www.w3.org/2000/svg">
+          <g
+            fill="#4d4d4d"
+            transform="matrix(.02146 0 0 .02146 1 1)">
+            <path
+              d="m466.07 161.53c-205.6 0-382.8 121.2-464.2 296.1-2.5 5.3-2.5 11.5 0 16.9 81.4 174.9 258.6 296.1 464.2 296.1 205.6 0 382.8-121.2 464.2-296.1 2.5-5.3 2.5-11.5 0-16.9-81.4-174.9-258.6-296.1-464.2-296.1m0 514.7c-116.1 0-210.1-94.1-210.1-210.1 0-116.1 94.1-210.1 210.1-210.1 116.1 0 210.1 94.1 210.1 210.1 0 116-94.1 210.1-210.1 210.1" />
+            <circle
+              cx="466.08"
+              cy="466.02"
+              r="134.5" />
+          </g>
+        </svg>
+      </a>
+      <br />
+    </div>
+    <div
+      style={
+        Object {
+          "float": "left",
+          "width": 300,
+        }
+      } />
+    <div
+      style={
+        Object {
+          "clear": "both",
+        }
+      } />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Molecule.PasswordInput with password quality 1`] = `
+<div>
+  <div
+    className="fieldset">
+    <div
+      style={
+        Object {
+          "float": "left",
+          "width": 165,
+        }
+      }>
+      <label
+        htmlFor="password">
+        Password
+      </label>
+      <input
+        maxLength={20}
+        name="password"
+        onChange={[Function]}
+        placeholder=""
+        type="password"
+        value="" />
+      <br />
+    </div>
+    <div
+      style={
+        Object {
+          "float": "left",
+          "width": 300,
+        }
+      } />
+    <div
+      style={
+        Object {
+          "clear": "both",
+        }
+      } />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Molecule.PasswordInput with placeholder 1`] = `
+<div>
+  <div
+    className="fieldset">
+    <div
+      style={
+        Object {
+          "float": "left",
+          "width": 165,
+        }
+      }>
+      <label
+        htmlFor="password">
+        Password
+      </label>
+      <input
+        maxLength={20}
+        name="password"
+        onChange={[Function]}
+        placeholder="Enter password"
+        type="password"
+        value="" />
+      <br />
+    </div>
+    <div
+      style={
+        Object {
+          "float": "left",
+          "width": 300,
+        }
+      } />
+    <div
+      style={
+        Object {
+          "clear": "both",
+        }
+      } />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Molecule.PasswordInput with show password 1`] = `
+<div>
+  <div
+    className="fieldset">
+    <div
+      style={
+        Object {
+          "float": "left",
+          "width": 165,
+        }
+      }>
+      <label
+        htmlFor="password">
+        Password
+      </label>
+      <input
+        maxLength={20}
+        name="password"
+        onChange={[Function]}
+        placeholder="Enter password"
+        type="password"
+        value="" />
+      <a
+        href="#"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginLeft": 5,
+          }
+        }>
+        <svg
+          viewBox="0 0 22 22"
+          width="16"
+          xmlns="http://www.w3.org/2000/svg">
+          <g
+            fill="#4d4d4d"
+            transform="matrix(.02146 0 0 .02146 1 1)">
+            <path
+              d="m466.07 161.53c-205.6 0-382.8 121.2-464.2 296.1-2.5 5.3-2.5 11.5 0 16.9 81.4 174.9 258.6 296.1 464.2 296.1 205.6 0 382.8-121.2 464.2-296.1 2.5-5.3 2.5-11.5 0-16.9-81.4-174.9-258.6-296.1-464.2-296.1m0 514.7c-116.1 0-210.1-94.1-210.1-210.1 0-116.1 94.1-210.1 210.1-210.1 116.1 0 210.1 94.1 210.1 210.1 0 116-94.1 210.1-210.1 210.1" />
+            <circle
+              cx="466.08"
+              cy="466.02"
+              r="134.5" />
+          </g>
+        </svg>
+      </a>
+      <br />
+    </div>
+    <div
+      style={
+        Object {
+          "float": "left",
+          "width": 300,
+        }
+      } />
+    <div
+      style={
+        Object {
+          "clear": "both",
+        }
+      } />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Molecule.PasswordInput with tips 1`] = `
+<div>
+  <div
+    className="fieldset">
+    <div
+      style={
+        Object {
+          "float": "left",
+          "width": 165,
+        }
+      }>
+      <label
+        htmlFor="password">
+        Password
+      </label>
+      <input
+        maxLength={20}
+        name="password"
+        onChange={[Function]}
+        placeholder="Enter password"
+        type="password"
+        value="" />
+      <br />
+    </div>
+    <div
+      style={
+        Object {
+          "float": "left",
+          "width": 300,
+        }
+      } />
+    <div
+      style={
+        Object {
+          "clear": "both",
+        }
+      } />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Organisms.RegistrationForm renders 1`] = `
+<div>
+  <div>
+    <div
+      className="fieldset">
+      <label
+        htmlFor="email">
+        Email
+      </label>
+      <div
+        className="field">
+        <input
+          className="form-control"
+          name="email"
+          onChange={[Function]}
+          placeholder={undefined}
+          style={Object {}}
+          type="text"
+          value="" />
+      </div>
+    </div>
+    <div
+      className="fieldset">
+      <div
+        style={
+          Object {
+            "float": "left",
+            "width": 165,
+          }
+        }>
+        <label
+          htmlFor="password">
+          Password
+        </label>
+        <input
+          maxLength={50}
+          name="password"
+          onChange={[Function]}
+          placeholder=""
+          type="password"
+          value="" />
+        <a
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "marginLeft": 5,
+            }
+          }>
+          <svg
+            viewBox="0 0 22 22"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg">
+            <g
+              fill="#4d4d4d"
+              transform="matrix(.02146 0 0 .02146 1 1)">
+              <path
+                d="m466.07 161.53c-205.6 0-382.8 121.2-464.2 296.1-2.5 5.3-2.5 11.5 0 16.9 81.4 174.9 258.6 296.1 464.2 296.1 205.6 0 382.8-121.2 464.2-296.1 2.5-5.3 2.5-11.5 0-16.9-81.4-174.9-258.6-296.1-464.2-296.1m0 514.7c-116.1 0-210.1-94.1-210.1-210.1 0-116.1 94.1-210.1 210.1-210.1 116.1 0 210.1 94.1 210.1 210.1 0 116-94.1 210.1-210.1 210.1" />
+              <circle
+                cx="466.08"
+                cy="466.02"
+                r="134.5" />
+            </g>
+          </svg>
+        </a>
+        <br />
+      </div>
+      <div
+        style={
+          Object {
+            "float": "left",
+            "width": 300,
+          }
+        } />
+      <div
+        style={
+          Object {
+            "clear": "both",
+          }
+        } />
+    </div>
+    <div>
+      <input
+        onClick={[Function]}
+        type="submit"
+        value="Register" />
+    </div>
+  </div>
+</div>
+`;
