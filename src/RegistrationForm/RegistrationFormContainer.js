@@ -20,7 +20,8 @@ class RegistrationFormContainer extends React.Component {
   onChange(event) {
     const {user} = this.state;
     user[event.target.name] = event.target.value;
-    this.setState({ user: user });
+    // Using short-hand notation
+    this.setState({ user });
   }
 
   validate() {
