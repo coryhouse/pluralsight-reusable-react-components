@@ -14,7 +14,7 @@ class PasswordInput extends React.Component {
 
   toggleShowPassword() {
     this.setState((prevState) => {
-      return {showPassword: !prevState.showPassword};
+      return { showPassword: !prevState.showPassword };
     });
   }
 
@@ -42,7 +42,7 @@ class PasswordInput extends React.Component {
 
     return (
       <div>
-        <div style={{float: 'left', width: 150}}>
+        <div style={{ float: 'left', width: 150 }}>
           <input
             type={showPassword ? 'text' : 'password'}
             placeholder={placeholder || ''}
@@ -55,25 +55,25 @@ class PasswordInput extends React.Component {
             showVisibilityToggle &&
             <a href="#" onClick={this.toggleShowPassword}><EyeIcon /></a>
           }
-          <br/>
-          {error && <div style={{ color: 'red'}}>{error}</div>}
+          <br />
+          {error && <div style={{ color: 'red' }}>{error}</div>}
           {
             showQuality && password &&
             <ProgressBar percent={score} />
           }
         </div>
-        <div style={{float: 'left', width: 300}}>
-        {
-          showTips &&
-          <ul>
-            { !containsAlpha && <li>Add alphabetical character.</li>}
-            { !containsNumber && <li>Add number.</li>}
-            { !containsSpecialChar && <li>Add special character.</li>}
-            { minLength && password.length < minLength && <li>Password must be at least {minLength} characters.</li>}
-          </ul>
-        }
+        <div style={{ float: 'left', width: 300 }}>
+          {
+            showTips &&
+            <ul>
+              {!containsAlpha && <li>Add alphabetical character.</li>}
+              {!containsNumber && <li>Add number.</li>}
+              {!containsSpecialChar && <li>Add special character.</li>}
+              {minLength && password.length < minLength && <li>Password must be at least {minLength} characters.</li>}
+            </ul>
+          }
         </div>
-        <div style={{clear: 'both'}}></div>
+        <div style={{ clear: 'both' }}></div>
       </div>
     );
   }

@@ -6,7 +6,7 @@ class PasswordInputContainer extends React.Component {
     super(props);
 
     this.state = {
-        password: ''
+      password: ''
     };
   }
 
@@ -15,10 +15,10 @@ class PasswordInputContainer extends React.Component {
       <div>
         <PasswordInput
           name="password"
-          onChange={(event) => this.setState({password: event.target.value})}
+          onChange={(event) => this.setState({ password: event.target.value })}
           value={this.state.password}
           {...this.props} />
-     </div>
+      </div>
     )
   }
 }
