@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import ProgressBar from '../ProgressBar/ProgressBar';
+import EyeIcon from '../EyeIcon/EyeIcon';
 
 class PasswordInput extends React.Component {
   constructor(props) {
@@ -30,18 +31,8 @@ class PasswordInput extends React.Component {
     return score;
   }
 
-  showTips() {
-    const password = this.props.value;
-    if (!this.props.showTips) return false;
-    if (!password) return false;
-    return !password.containsAlpha ||
-      !password.containsNumber ||
-      !password.containsSpecialChar ||
-      password.length < this.props.minLength
-  }
-
   render() {
-    const {value, name, onChange, placeholder, maxLength, minLength, showVisibilityToggle, showQuality, showTips, ...props} = this.props;
+    const {value, error, name, onChange, placeholder, maxLength, minLength, showVisibilityToggle, showQuality, showTips, ...props} = this.props;
     const {showPassword} = this.state;
     const password = value || '';
     const containsAlpha = password.match(/[a-z]/g);
@@ -51,30 +42,29 @@ class PasswordInput extends React.Component {
 
     return (
       <div>
-        <input type={showPassword ? 'text' : 'password'}
-          placeholder={placeholder || ''}
-          onChange={onChange}
-          value={password}
-          maxLength={maxLength}
-          name={name}
-          {...props} />
-        {" "}
+        <div style={{float: 'left', width: 150}}>
+          <input
+            type={showPassword ? 'text' : 'password'}
+            placeholder={placeholder || ''}
+            onChange={onChange}
+            value={password}
+            maxLength={maxLength}
+            name={name}
+            {...props} />
+          {
+            showVisibilityToggle &&
+            <a href="#" onClick={this.toggleShowPassword}><EyeIcon /></a>
+          }
+          <br/>
+          {error && <div style={{ color: 'red'}}>{error}</div>}
+          {
+            showQuality && password &&
+            <ProgressBar percent={score} />
+          }
+        </div>
+        <div style={{float: 'left', width: 300}}>
         {
-          showVisibilityToggle &&
-          <a
-            href="#"
-            onClick={this.toggleShowPassword}>
-            {showPassword ? 'Hide' : 'Show'} Password
-          </a>
-        }
-
-        {
-          showQuality && password &&
-          <ProgressBar percent={score} />
-        }
-
-        {
-          showTips && this.showTips() &&
+          showTips &&
           <ul>
             { !containsAlpha && <li>Add alphabetical character.</li>}
             { !containsNumber && <li>Add number.</li>}
@@ -82,6 +72,8 @@ class PasswordInput extends React.Component {
             { minLength && password.length < minLength && <li>Password must be at least {minLength} characters.</li>}
           </ul>
         }
+        </div>
+        <div style={{clear: 'both'}}></div>
       </div>
     );
   }
@@ -96,6 +88,7 @@ PasswordInput.propTypes = {
   placeholder: PropTypes.string,
   showVisibilityToggle: PropTypes.bool,
   showQuality: PropTypes.bool,
+  error: PropTypes.string,
   showTips: PropTypes.bool
 };
 
