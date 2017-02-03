@@ -1,9 +1,9 @@
 import React from 'react';
 import { storiesOf, action, linkTo } from '@kadira/storybook';
-import TextInput from '../TextInput/TextInput';
-import ProgressBar from '../ProgressBar/ProgressBar';
-import PasswordInputContainer from '../PasswordInput/PasswordInputContainer';
-import RegistrationFormContainer from '../RegistrationForm/RegistrationFormContainer';
+import TextInput from '../src/TextInput/TextInput';
+import ProgressBar from '../src/ProgressBar/ProgressBar';
+import PasswordInputContainer from '../src/PasswordInput/PasswordInputContainer';
+import RegistrationFormContainer from '../src/RegistrationForm/RegistrationFormContainer';
 
 storiesOf('Atom.TextInput', module)
   // Note that the maxLength gets passed through via object spread operator in TextInput
