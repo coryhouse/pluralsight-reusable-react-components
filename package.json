@@ -16,6 +16,7 @@
     "coverage": "node --harmony_proxies node_modules/.bin/jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
+    "deploy-storybook": "storybook-to-ghpages",
     "pkgfiles": "pkgfiles"
   },
   "peerDependencies": {
@@ -24,6 +25,7 @@
   },
   "devDependencies": {
     "@kadira/storybook": "^2.21.0",
+    "@kadira/storybook-deployer": "^1.2.0",
     "babel-jest": "^18.0.0",
     "babel-polyfill": "^6.22.0",
     "babel-preset-latest": "^6.22.0",
