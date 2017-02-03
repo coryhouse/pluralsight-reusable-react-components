@@ -11,6 +11,8 @@
     "url": "coryhouse/pluralsight-reusable-react-components"
   },
   "scripts": {
+    "prebuild": "rimraf build",
+    "build": "babel src --out-dir build",
     "start": "npm run storybook",
     "test": "jest --env=jsdom",
     "coverage": "node --harmony_proxies node_modules/.bin/jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
@@ -26,6 +28,7 @@
   "devDependencies": {
     "@kadira/storybook": "^2.21.0",
     "@kadira/storybook-deployer": "^1.2.0",
+    "babel-cli": "^6.22.2",
     "babel-jest": "^18.0.0",
     "babel-polyfill": "^6.22.0",
     "babel-preset-latest": "^6.22.0",
@@ -38,6 +41,7 @@
     "react": "^15.4.2",
     "react-addons-test-utils": "^15.4.2",
     "react-dom": "^15.4.2",
+    "rimraf": "^2.5.4",
     "storyshots": "^3.2.1"
   },
   "dependencies": {},
