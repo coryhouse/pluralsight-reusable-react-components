@@ -1,0 +1,12 @@
+body {
+  font-family: sans-serif;
+}
+
+.fieldset {
+  margin-bottom: 20px;
+}
+
+ul.unstyled {
+  list-style: none;
+  padding-left: 0;
+}
