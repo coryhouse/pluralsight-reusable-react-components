@@ -14,8 +14,11 @@
     "prebuild": "rimraf build",
     "build": "babel src --out-dir build",
     "start": "npm run storybook",
-    "test": "jest --env=jsdom",
-    "coverage": "node --harmony_proxies node_modules/.bin/jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "//": "This noisier style is necessary to support running on TravisCI",
+    "test": "node --harmony_proxies node_modules/jest/bin/jest",
+    "test:cover": "npm run test -- --coverage ",
+    "test:cover:travis": "npm run test:cover && cat ./coverage/lcov.info | node_modules/coveralls/bin/coveralls.js",
+    "open:cover": "npm run test:cover && open coverage/lcov-report/index.html",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
     "deploy-storybook": "storybook-to-ghpages",
@@ -37,6 +40,7 @@
     "coveralls": "^2.11.15",
     "enzyme": "^2.7.1",
     "jest": "^18.1.0",
+    "open": "0.0.5",
     "pkgfiles": "^2.3.2",
     "react": "^15.4.2",
     "react-addons-test-utils": "^15.4.2",
@@ -53,5 +57,11 @@
     "progress",
     "progress-bar",
     "react-component"
-  ]
+  ],
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(css|scss)$": "identity-obj-proxy",
+      "^.+\\.(gif|ttf|eot|svg|woff|woff2|ico)$": "<rootDir>/tools/fileMock.js"
+    }
+  }
 }
