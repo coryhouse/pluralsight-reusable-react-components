@@ -1,5 +1,8 @@
 import React, { PropTypes } from 'react';
 
+/**
+ * Display progress from 0% to 100%
+ */
 class ProgressBar extends React.Component {
   constructor(props) {
     super(props);
@@ -39,7 +42,13 @@ class ProgressBar extends React.Component {
 }
 
 ProgressBar.propTypes = {
+  /**
+   * Number from 0 and 100 that represents progress.
+   */
   percent: PropTypes.number.isRequired,
+  /**
+   * Bar height in pixels.
+   */
   height: PropTypes.number
 };
 

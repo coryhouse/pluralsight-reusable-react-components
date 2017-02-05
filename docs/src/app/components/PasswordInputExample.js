@@ -1,7 +1,10 @@
 import React from 'react';
-import PasswordInput from './PasswordInput';
+// Note that the handy index.js in each component folder gives me a handy shortcut
+// to avoid having to type the name of the component twice below (once for folder
+// and once for filename.)
+import PasswordInput from '../../src/PasswordInput';
 
-class PasswordInputContainer extends React.Component {
+class PasswordInputExample extends React.Component {
   constructor(props) {
     super(props);
 
@@ -23,4 +26,4 @@ class PasswordInputContainer extends React.Component {
   }
 }
 
-export default PasswordInputContainer;
+export default PasswordInputExample;
