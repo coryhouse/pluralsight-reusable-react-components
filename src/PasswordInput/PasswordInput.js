@@ -2,6 +2,9 @@ import React, { PropTypes } from 'react';
 import ProgressBar from '../ProgressBar/ProgressBar';
 import EyeIcon from '../EyeIcon/EyeIcon';
 
+/**
+ * Full-featured Password Input
+ */
 class PasswordInput extends React.Component {
   constructor(props) {
     super(props);
@@ -85,16 +88,50 @@ class PasswordInput extends React.Component {
 }
 
 PasswordInput.propTypes = {
+  /**
+   * Password value
+   */
   value: PropTypes.string,
+  /**
+   * Input name
+   */
   name: PropTypes.string.isRequired,
+  /**
+   * Function called when password input value changes
+   */
   onChange: PropTypes.func.isRequired,
+  /**
+   * Max password length accepted
+   */
   maxLength: PropTypes.number.isRequired,
+  /**
+   * Min password length accepted
+   */
   minLength: PropTypes.number,
+  /**
+   * Placeholder displayed when no password is entered
+   */
   placeholder: PropTypes.string,
+  /**
+   * Set to true to show the toggle for displaying the currently entered password
+   */
   showVisibilityToggle: PropTypes.bool,
+  /**
+   * Set to true to display password quality visually via ProgressBar
+   */
   showQuality: PropTypes.bool,
+  /**
+   * Validation error to display
+   */
   error: PropTypes.string,
-  showTips: PropTypes.bool
+  /**
+   * Set to true to show tips for improving the password
+   */
+  showTips: PropTypes.bool,
+  /**
+   * Object that overrides the default theme
+   */
+  theme: PropTypes.object
 };
 
 PasswordInput.default = {

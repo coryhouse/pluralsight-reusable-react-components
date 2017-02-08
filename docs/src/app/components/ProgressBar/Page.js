@@ -11,14 +11,14 @@ import Example70PercentCode from '!raw!./Example70Percent';
 import Example100Percent from './Example100Percent';
 import Example100PercentCode from '!raw!./Example100Percent';
 
-const progressBarInfo = parse(progressBarCode);
+const info = parse(progressBarCode);
 
 const ProgressBarPage = () => {
   return (
     <div>
       <Title render={(previousTitle) => `${previousTitle} ProgressBar`} />
       <h2>ProgressBar</h2>
-      <p>{progressBarInfo.description}</p>
+      <p>{info.description}</p>
       <h3>Examples</h3>
 
       <Example code={Example10PercentCode}><Example10Percent /></Example>
@@ -26,7 +26,7 @@ const ProgressBarPage = () => {
       <Example code={Example100PercentCode}><Example100Percent /></Example>
 
       <h3>Props</h3>
-      <PropDocumentation props={progressBarInfo.props} />
+      <PropDocumentation props={info.props} />
     </div>
   )
 };
