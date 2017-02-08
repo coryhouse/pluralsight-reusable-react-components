@@ -13,7 +13,8 @@ export default class Docs extends React.Component {
     };
   }
 
-  setPage(page) {
+  setPage(event, page) {
+    event.preventDefault();
     this.setState({page: page});
   }
 
@@ -34,8 +35,8 @@ export default class Docs extends React.Component {
       <div>
         <div style={{float: 'left', width: 200}}>
           <ul>
-            <li><a href="#" onClick={() => this.setPage('PasswordInput')}>PasswordInput</a></li>
-            <li><a href="#" onClick={() => this.setPage('ProgressBar')}>ProgressBar</a></li>
+            <li><a href="#" onClick={(event) => this.setPage(event, 'PasswordInput')}>PasswordInput</a></li>
+            <li><a href="#" onClick={(event) => this.setPage(event, 'ProgressBar')}>ProgressBar</a></li>
           </ul>
        </div>
 
