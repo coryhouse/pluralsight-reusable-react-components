@@ -21,16 +21,19 @@ export default class Docs extends React.Component {
   render() {
     return (
       <div>
-        <Title render={(previousTitle) => `Pluralsight UI Docs - ${previousTitle}`} />
+        <Title render={(previousTitle) => `Pluralsight UI Docs - ProgressBar`} />
         <h2>ProgressBar</h2>
         <p>{progressBarInfo.description}</p>
         <h3>Examples</h3>
+
         <p>{example10PercentInfo.description}</p>
         <Example10Percent />
         <pre>{Example10PercentCode}</pre>
+
         <p>{example70PercentInfo.description}</p>
         <Example70Percent />
         <pre>{Example70PercentCode}</pre>
+
         <p>{example100PercentInfo.description}</p>
         <Example100Percent />
         <pre>{Example100PercentCode}</pre>
