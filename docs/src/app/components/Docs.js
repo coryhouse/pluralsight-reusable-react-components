@@ -8,35 +8,23 @@ import Example70Percent from './ProgressBar/Example70Percent';
 import Example70PercentCode from '!raw!./ProgressBar/Example70Percent';
 import Example100Percent from './ProgressBar/Example100Percent';
 import Example100PercentCode from '!raw!./ProgressBar/Example100Percent';
-import PasswordInputExampleCode from '!raw!./PasswordInputExample';
+import Example from './Example';
 import {parse} from 'react-docgen';
 
-// console.log(PasswordInputExampleCode);
 const progressBarInfo = parse(progressBarCode);
-const example10PercentInfo = parse(Example10PercentCode);
-const example70PercentInfo = parse(Example70PercentCode);
-const example100PercentInfo = parse(Example100PercentCode);
 
 export default class Docs extends React.Component {
   render() {
     return (
       <div>
-        <Title render={(previousTitle) => `Pluralsight UI Docs - ProgressBar`} />
+        <Title render={(previousTitle) => `Pluralsight UI Docs`} />
         <h2>ProgressBar</h2>
         <p>{progressBarInfo.description}</p>
         <h3>Examples</h3>
 
-        <p>{example10PercentInfo.description}</p>
-        <Example10Percent />
-        <pre>{Example10PercentCode}</pre>
-
-        <p>{example70PercentInfo.description}</p>
-        <Example70Percent />
-        <pre>{Example70PercentCode}</pre>
-
-        <p>{example100PercentInfo.description}</p>
-        <Example100Percent />
-        <pre>{Example100PercentCode}</pre>
+        <Example code={Example10PercentCode}><Example10Percent /></Example>
+        <Example code={Example70PercentCode}><Example70Percent /></Example>
+        <Example code={Example100PercentCode}><Example100Percent /></Example>
 
         <h3>Props</h3>
         <PropDocumentation props={progressBarInfo.props} />
