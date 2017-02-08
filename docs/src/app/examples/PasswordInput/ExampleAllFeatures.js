@@ -5,9 +5,9 @@ import React from 'react';
 import PasswordInput from 'pluralsight-ui/PasswordInput';
 
 /**
- * PasswordInput with all features enabled
+ * All features enabled
  */
-class PasswordInputExample extends React.Component {
+class ExampleAllFeatures extends React.Component {
   constructor(props) {
     super(props);
 
@@ -35,4 +35,4 @@ class PasswordInputExample extends React.Component {
   }
 }
 
-export default PasswordInputExample;
+export default ExampleAllFeatures;

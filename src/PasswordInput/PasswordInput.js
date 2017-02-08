@@ -3,7 +3,7 @@ import ProgressBar from '../ProgressBar/ProgressBar';
 import EyeIcon from '../EyeIcon/EyeIcon';
 
 /**
- * Full-featured Password Input
+ * Full-featured Password Input with integrated label, quality tips, and show password toggle.
  */
 class PasswordInput extends React.Component {
   constructor(props) {

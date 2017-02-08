@@ -1,8 +1,9 @@
 import React from 'react';
 import Title from 'react-title-component';
 import {parse} from 'react-docgen';
-import ProgressBarPage from './ProgressBar/Page';
-import PasswordInputPage from './PasswordInput/Page';
+import ProgressBarPage from './examples/ProgressBar/Page';
+import PasswordInputPage from './examples/PasswordInput/Page';
+import fs from 'fs';
 
 export default class Docs extends React.Component {
   constructor(props) {
@@ -31,6 +32,7 @@ export default class Docs extends React.Component {
   }
 
   render() {
+    //const dirs = p => fs.readdirSync(p).filter(f => fs.statSync(p+"/"+f).isDirectory())
     return (
       <div>
         <div style={{float: 'left', width: 200}}>
