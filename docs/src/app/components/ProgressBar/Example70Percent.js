@@ -1,5 +1,5 @@
 import React from 'react';
-import ProgressBar from 'material-ui/ProgressBar';
+import ProgressBar from 'pluralsight-ui/ProgressBar';
 
 /**
  * ProgressBar at 70%

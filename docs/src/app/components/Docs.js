@@ -1,7 +1,7 @@
 import React from 'react';
 import PropDocumentation from './PropDocumentation';
 import Title from 'react-title-component';
-import progressBarCode from '!raw!material-ui/ProgressBar/ProgressBar';
+import progressBarCode from '!raw!pluralsight-ui/ProgressBar/ProgressBar';
 import Example10Percent from './ProgressBar/Example10Percent';
 import Example10PercentCode from '!raw!./ProgressBar/Example10Percent';
 import Example70Percent from './ProgressBar/Example70Percent';
@@ -13,6 +13,9 @@ import {parse} from 'react-docgen';
 
 // console.log(PasswordInputExampleCode);
 const progressBarInfo = parse(progressBarCode);
+const example10PercentInfo = parse(Example10PercentCode);
+const example70PercentInfo = parse(Example70PercentCode);
+const example100PercentInfo = parse(Example100PercentCode);
 
 export default class Docs extends React.Component {
   render() {
@@ -22,13 +25,15 @@ export default class Docs extends React.Component {
         <h2>ProgressBar</h2>
         <p>{progressBarInfo.description}</p>
         <h3>Examples</h3>
-        <p>10%</p>
+        <p>{example10PercentInfo.description}</p>
         <Example10Percent />
         <pre>{Example10PercentCode}</pre>
-        <p>70%</p>
+        <p>{example70PercentInfo.description}</p>
         <Example70Percent />
-        <p>100%</p>
+        <pre>{Example70PercentCode}</pre>
+        <p>{example100PercentInfo.description}</p>
         <Example100Percent />
+        <pre>{Example100PercentCode}</pre>
 
         <h3>Props</h3>
         <PropDocumentation props={progressBarInfo.props} />

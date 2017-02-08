@@ -16,8 +16,8 @@ const config = {
     // When requiring, you don't need to add these extensions
     extensions: ['', '.js', '.md', '.txt'],
     alias: {
-      // material-ui requires will be searched in src folder, not in node_modules
-      'material-ui': path.resolve(__dirname, '../src'),
+      // pluralsight-ui requires will be searched in src folder, not in node_modules
+      'pluralsight-ui': path.resolve(__dirname, '../src'),
     },
   },
   // Configuration for dev server
