@@ -28,11 +28,29 @@ const TextInput = ({name, label, onChange, placeholder, value, error, ...props})
 };
 
 TextInput.propTypes = {
+  /**
+   * Input name
+   */
   name: PropTypes.string.isRequired,
+  /**
+   * Input label
+   */
   label: PropTypes.string.isRequired,
+  /**
+   * Function to call onChange
+   */
   onChange: PropTypes.func.isRequired,
+  /**
+   * Placeholder to display when empty
+   */
   placeholder: PropTypes.string,
+  /**
+   * Value
+   */
   value: PropTypes.string,
+  /**
+   * String to display when error occurs
+   */
   error: PropTypes.string
 };
 

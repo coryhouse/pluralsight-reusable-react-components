@@ -19,7 +19,7 @@ class ProgressBar extends React.Component {
   }
 
   render() {
-    const height = this.props.height || 10;
+    const height = this.props.height || 5;
 
     let containerStyle = {
       width: 100,

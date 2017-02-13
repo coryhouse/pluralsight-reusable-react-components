@@ -1,4 +1,4 @@
-Basic:    
+Basic  
     
     <PasswordInput
       name="password"
@@ -6,7 +6,7 @@ Basic:
       maxLength={50}
     />
 
-All features enabled:
+All features enabled
 
     <PasswordInput
       name="password"
