@@ -22,7 +22,9 @@
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
     "deploy-storybook": "storybook-to-ghpages",
-    "pkgfiles": "pkgfiles"
+    "pkgfiles": "pkgfiles",
+    "styleguide-server": "styleguidist server",
+    "styleguide-build": "styleguidist build"
   },
   "peerDependencies": {
     "react": "^0.14.0 || ^15.0.0",
@@ -53,6 +55,7 @@
     "react": "^15.4.2",
     "react-addons-test-utils": "^15.4.2",
     "react-dom": "^15.4.2",
+    "react-styleguidist": "^4.6.3",
     "rimraf": "^2.5.4",
     "storyshots": "^3.2.1",
     "webpack": "^2.2.1"

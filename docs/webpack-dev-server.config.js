@@ -40,7 +40,7 @@ const config = {
     // Allows for sync with browser while developing (like BrowserSync)
     new webpack.HotModuleReplacementPlugin(),
     // Allows error warninggs but does not stop compiling. Will remove when eslint is added
-    new webpack.NoErrorsPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
     new CopyWebpackPlugin([
       {from: 'src/www/index.html'},
     ]),
@@ -77,6 +77,10 @@ const config = {
   eslint: {
     configFile: '../.eslintrc',
   },
+  // Necessary or webpack will throw error https://github.com/pugjs/pug-loader/issues/8#issuecomment-55568520
+  // node: {
+  //   fs: "empty"
+  // }
 };
 
 module.exports = config;

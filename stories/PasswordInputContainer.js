@@ -1,5 +1,5 @@
 import React from 'react';
-import PasswordInput from './PasswordInput';
+import PasswordInput from '../src/PasswordInput';
 
 class PasswordInputContainer extends React.Component {
   constructor(props) {
