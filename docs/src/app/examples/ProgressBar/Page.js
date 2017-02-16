@@ -1,13 +1,13 @@
 import React from 'react';
 import Example from '../../Example';
 import ComponentPage from '../../ComponentPage';
-import code from '!raw!pluralsight-ui/ProgressBar/ProgressBar';
+import code from '!raw-loader!pluralsight-ui/ProgressBar/ProgressBar';
 import Example10Percent from './Example10Percent';
-import Example10PercentCode from '!raw!./Example10Percent';
+import Example10PercentCode from '!raw-loader!./Example10Percent';
 import Example70Percent from './Example70Percent';
-import Example70PercentCode from '!raw!./Example70Percent';
+import Example70PercentCode from '!raw-loader!./Example70Percent';
 import Example100Percent from './Example100Percent';
-import Example100PercentCode from '!raw!./Example100Percent';
+import Example100PercentCode from '!raw-loader!./Example100Percent';
 
 const ProgressBarPage = () => {
   return (

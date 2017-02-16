@@ -3,18 +3,15 @@ const path = require('path');
 const buildPath = path.resolve(__dirname, 'src/www');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-const config = {
+module.exports = {
   // Entry point to the project
   entry: [
-    'webpack/hot/dev-server',
-    'webpack/hot/only-dev-server',
-    './node_modules/babel-polyfill/lib/index.js',
-    path.resolve(__dirname, 'src/app/app.js'),
+    path.resolve(__dirname, 'src/app/index.js')
   ],
   // Webpack config options on how to obtain modules
   resolve: {
     // When requiring, you don't need to add these extensions
-    extensions: ['', '.js', '.md', '.txt'],
+    extensions: ['.js', '.md', '.txt'],
     alias: {
       // pluralsight-ui requires will be searched in src folder, not in node_modules
       'pluralsight-ui': path.resolve(__dirname, '../src'),
@@ -23,12 +20,9 @@ const config = {
   // Configuration for dev server
   devServer: {
     contentBase: 'src/www',
-    devtool: 'eval',
     hot: true,
     inline: true,
-    port: 3000,
-    // Required for webpack-dev-server.
-    outputPath: buildPath,
+    port: 3000
   },
   devtool: 'eval',
   // Output file config
@@ -74,13 +68,8 @@ const config = {
       },
     ],
   },
-  eslint: {
-    configFile: '../.eslintrc',
-  },
-  // Necessary or webpack will throw error https://github.com/pugjs/pug-loader/issues/8#issuecomment-55568520
-  // node: {
-  //   fs: "empty"
-  // }
+  //Necessary or webpack will throw error https://github.com/pugjs/pug-loader/issues/8#issuecomment-55568520
+  node: {
+    fs: "empty"
+  }
 };
-
-module.exports = config;
