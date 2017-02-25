@@ -12,7 +12,7 @@
   },
   "scripts": {
     "prebuild": "rimraf build",
-    "build": "babel src --out-dir build",
+    "build": "babel src --out-dir ./build --ignore test.js",
     "start": "npm run storybook",
     "//": "This noisier style is necessary to support running on TravisCI - copied from Material UI's set up.",
     "test": "jest",
