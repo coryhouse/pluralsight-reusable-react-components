@@ -44,27 +44,27 @@ module.exports = {
     loaders: [
       {
         test: /\.js$/,
-        loaders: [
+        use: [
           'babel-loader',
         ],
         exclude: /node_modules/,
       },
       {
         test: /\.json$/,
-        loader: 'json-loader',
+        use: 'json-loader',
       },
       {
         test: /\.txt$/,
-        loader: 'raw-loader',
+        use: 'raw-loader',
         include: path.resolve(__dirname, 'src/app/components/raw-code'),
       },
       {
         test: /\.md$/,
-        loader: 'raw-loader',
+        use: 'raw-loader',
       },
       {
         test: /\.css$/,
-        loader: 'style-loader!css-loader',
+        use: ['style-loader', 'css-loader?modules&localIdentName=[name]__[local]___[hash:base64:5]']
       },
     ],
   },

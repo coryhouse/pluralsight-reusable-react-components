@@ -44,7 +44,7 @@ module.exports = {
     },
     {
       test: /\.css/,
-      use: ['style-loader', 'css?modules&localIdentName=[local]---[hash:base64:5]', 'cssnext']
+      use: ['style-loader', 'css-loader?modules&localIdentName=[name]__[local]___[hash:base64:5]']
     },
     {
       test: /\.txt$/,
