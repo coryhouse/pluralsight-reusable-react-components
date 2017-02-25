@@ -1,7 +1,29 @@
 {
-  "presets": [
-    ["latest", { "modules": false }],
-    "react",
-    "stage-1"
-  ]
+  "presets": ["./tools/pluralsight-react-components-babel-preset", "stage-1", "react"],
+  "env": {
+    "test": {
+      "sourceMaps": "both"
+    },
+    "docs-production": {
+      "plugins": [
+        // Remove prop types to save bandwidth
+        "transform-react-remove-prop-types",
+
+        // Hoists element creation to top level to improves performance
+        // Makes warning messages cryptic, so only do on prod
+        "transform-react-constant-elements",
+
+        // Replaces the React.createElement function
+        // with one that is more optimized for production: babelHelpers.jsx
+        // Makes warning messages cryptic, so only do on prod
+        "transform-react-inline-elements"
+      ]
+    },
+    "release": {
+      "plugins": [
+        "transform-runtime",
+        ["transform-react-remove-prop-types", {"mode": "wrap"}]
+      ]
+    }
+  }
 }
