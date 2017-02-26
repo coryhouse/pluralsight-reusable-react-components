@@ -12,14 +12,20 @@
   },
   "scripts": {
     "prebuild": "rimraf build",
-    "build": "babel src --out-dir build",
+    "build": "npm run build:babel && npm run build:es",
+    "build:babel": "cross-env NODE_ENV=release babel ./src --out-dir ./build --ignore spec.js",
+    "build:es": "cross-env BABEL_ENV=es babel ./src/index.js --out-file ./build/index.es.js",
     "start": "npm run storybook",
-    "test": "jest --env=jsdom",
-    "coverage": "node --harmony_proxies node_modules/.bin/jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "test": "jest",
+    "test:cover": "npm run test -- --coverage ",
+    "test:cover:travis": "npm run test --coverage && cat ./coverage/lcov.info | node_modules/coveralls/bin/coveralls.js",
+    "open:cover": "npm run test:cover && open coverage/lcov-report/index.html",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
     "deploy-storybook": "storybook-to-ghpages",
-    "pkgfiles": "pkgfiles"
+    "pkgfiles": "pkgfiles",
+    "styleguide-server": "styleguidist server",
+    "styleguide-build": "styleguidist build"
   },
   "peerDependencies": {
     "react": "^0.14.0 || ^15.0.0",
@@ -29,7 +35,15 @@
     "@kadira/storybook": "^2.21.0",
     "@kadira/storybook-deployer": "^1.2.0",
     "babel-cli": "^6.22.2",
+    "babel-core": "^6.22.1",
     "babel-jest": "^18.0.0",
+    "babel-loader": "^6.2.10",
+    "babel-plugin-transform-dev-warning": "^0.1.0",
+    "babel-plugin-transform-react-constant-elements": "^6.5.0",
+    "babel-plugin-transform-react-inline-elements": "^6.6.5",
+    "babel-plugin-transform-react-remove-prop-types": "^0.2.10",
+    "babel-plugin-transform-replace-object-assign": "^0.2.1",
+    "babel-plugin-transform-runtime": "^6.15.0",
     "babel-polyfill": "^6.22.0",
     "babel-preset-latest": "^6.22.0",
     "babel-preset-react": "^6.22.0",
@@ -37,14 +51,21 @@
     "coveralls": "^2.11.15",
     "enzyme": "^2.7.1",
     "jest": "^18.1.0",
+    "open": "0.0.5",
     "pkgfiles": "^2.3.2",
     "react": "^15.4.2",
     "react-addons-test-utils": "^15.4.2",
     "react-dom": "^15.4.2",
+    "react-styleguidist": "^4.6.3",
     "rimraf": "^2.5.4",
-    "storyshots": "^3.2.1"
+    "storyshots": "^3.2.1",
+    "webpack": "^2.2.1"
   },
-  "dependencies": {},
+  "dependencies": {
+    "cross-env": "^3.1.4",
+    "gulp": "^3.9.1",
+    "react-bluekit": "^0.4.0-typescript02"
+  },
   "keywords": [
     "react",
     "redux",
@@ -53,5 +74,11 @@
     "progress",
     "progress-bar",
     "react-component"
-  ]
+  ],
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(css|scss)$": "identity-obj-proxy",
+      "^.+\\.(gif|ttf|eot|svg|woff|woff2|ico)$": "<rootDir>/tools/fileMock.js"
+    }
+  }
 }

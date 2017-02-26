@@ -1,0 +1,44 @@
+{
+  "name": "pluralsight-ui-docs",
+  "version": "1.0.0",
+  "description": "Documentation for Pluralsight-UI",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/coryhouse/pluralsight-reusable-react-components"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "private": true,
+  "scripts": {
+    "start": "webpack-dev-server --config webpack-dev-server.config.js --progress --colors --inline",
+    "build": "NODE_ENV=docs-production webpack --config webpack-production.config.js --progress --colors --profile",
+    "open-build": "NODE_ENV=docs-production webpack-dev-server --config webpack-production.config.js --progress --colors",
+    "gh-pages:build": "node ./gh-pages-build.js"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.16.0",
+    "react-title-component": "^1.0.1",
+    "simple-assign": "^0.1.0"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^4.0.1",
+    "css-loader": "^0.26.1",
+    "doctrine": "^2.0.0",
+    "highlight.js": "^9.8.0",
+    "history": "^4.5.1",
+    "intl": "^1.2.5",
+    "intl-locales-supported": "^1.0.0",
+    "json-loader": "^0.5.4",
+    "marked": "^0.3.5",
+    "raw-loader": "^0.5.1",
+    "react-addons-perf": "^15.4.0",
+    "react-docgen": "^2.13.0",
+    "react-router": "^3.0.0",
+    "react-swipeable-views": "^0.10.7",
+    "recast": "^0.11.22",
+    "style-loader": "0.13.1",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.3.0"
+  }
+}

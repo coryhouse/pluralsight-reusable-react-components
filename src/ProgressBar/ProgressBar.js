@@ -1,5 +1,9 @@
 import React, { PropTypes } from 'react';
+import styles from './ProgressBar.css';
 
+/**
+ * Display progress from 0% to 100%
+ */
 class ProgressBar extends React.Component {
   constructor(props) {
     super(props);
@@ -16,13 +20,7 @@ class ProgressBar extends React.Component {
   }
 
   render() {
-    const height = this.props.height || 10;
-
-    let containerStyle = {
-      width: 100,
-      height: height,
-      border: '1px solid lightgray'
-    };
+    const height = this.props.height || 5;
 
     let barStyle = {
       width: this.props.percent,
@@ -31,7 +29,7 @@ class ProgressBar extends React.Component {
     };
 
     return (
-      <div style={containerStyle}>
+      <div className={styles.container}>
         <div style={barStyle} />
       </div>
     );
@@ -39,7 +37,13 @@ class ProgressBar extends React.Component {
 }
 
 ProgressBar.propTypes = {
+  /**
+   * Number from 0 and 100 that represents progress.
+   */
   percent: PropTypes.number.isRequired,
+  /**
+   * Bar height in pixels.
+   */
   height: PropTypes.number
 };
 

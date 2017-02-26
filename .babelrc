@@ -1,7 +1,14 @@
 {
-  "presets": [
-    "latest",
-    "react",
-    "stage-1"
-  ]
+  "presets": ["./tools/pluralsight-react-components-babel-preset", "stage-1", "react"],
+  "env": {
+    "test": {
+      "sourceMaps": "both"
+    },
+    "release": {
+      "plugins": [
+        "transform-runtime",
+        ["transform-react-remove-prop-types", {"mode": "wrap"}]
+      ]
+    }
+  }
 }

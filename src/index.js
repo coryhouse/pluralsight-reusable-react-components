@@ -1,2 +1,5 @@
-export PasswordInput from './PasswordInput/PasswordInput';
-export TextInput from './TextInput/TextInput';
+export EyeIcon from './EyeIcon';
+export PasswordInput from './PasswordInput';
+export ProgressBar from './ProgressBar';
+export RegistrationForm from './RegistrationForm';
+export TextInput from './TextInput';

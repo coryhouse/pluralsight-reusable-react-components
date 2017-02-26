@@ -30,6 +30,9 @@ const RegistrationForm = ({email, errors, password, onChange, onSubmit}) => {
 }
 
 RegistrationForm.propTypes = {
+  /**
+   * User email address
+   */
   email: PropTypes.string.isRequired,
   password: PropTypes.string.isRequired,
   errors: PropTypes.object.isRequired,
