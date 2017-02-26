@@ -1,17 +1,11 @@
 exports[`Storyshots Atom.ProgressBar Dark green at 100% complete 1`] = `
 <div
-  style={
-    Object {
-      "border": "1px solid lightgray",
-      "height": 10,
-      "width": 100,
-    }
-  }>
+  className="container">
   <div
     style={
       Object {
         "backgroundColor": "green",
-        "height": 10,
+        "height": 5,
         "width": 100,
       }
     } />
@@ -20,18 +14,12 @@ exports[`Storyshots Atom.ProgressBar Dark green at 100% complete 1`] = `
 
 exports[`Storyshots Atom.ProgressBar Light green at 60% complete 1`] = `
 <div
-  style={
-    Object {
-      "border": "1px solid lightgray",
-      "height": 10,
-      "width": 100,
-    }
-  }>
+  className="container">
   <div
     style={
       Object {
         "backgroundColor": "lightgreen",
-        "height": 10,
+        "height": 5,
         "width": 60,
       }
     } />
@@ -40,18 +28,12 @@ exports[`Storyshots Atom.ProgressBar Light green at 60% complete 1`] = `
 
 exports[`Storyshots Atom.ProgressBar Red at 10% complete 1`] = `
 <div
-  style={
-    Object {
-      "border": "1px solid lightgray",
-      "height": 10,
-      "width": 100,
-    }
-  }>
+  className="container">
   <div
     style={
       Object {
         "backgroundColor": "red",
-        "height": 10,
+        "height": 5,
         "width": 10,
       }
     } />

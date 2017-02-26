@@ -1,5 +1,6 @@
 import React from 'react';
 import PasswordInput from './PasswordInput';
+import {shallow} from 'enzyme';
 
 // Note that this import can be commented out once
 // we declare the jestSetup in package.json because
