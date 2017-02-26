@@ -4,6 +4,7 @@ import {parse} from 'react-docgen';
 import ProgressBarPage from './examples/ProgressBar/Page';
 import PasswordInputPage from './examples/PasswordInput/Page';
 import fs from 'fs';
+import Editor from './Editor/Editor';
 
 export default class Docs extends React.Component {
   constructor(props) {
