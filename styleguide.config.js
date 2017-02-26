@@ -1,3 +1,4 @@
+// Config for styleguidist
 var path = require('path');
 
 module.exports = {
