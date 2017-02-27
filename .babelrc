@@ -1,6 +1,9 @@
 {
   "presets": ["./tools/pluralsight-react-components-babel-preset", "stage-1", "react"],
   "env": {
+    "umd": {
+      "plugins": ["transform-es2015-modules-umd"]
+    },
     "test": {
       "sourceMaps": "both"
     },
