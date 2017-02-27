@@ -1,5 +1,5 @@
-var path = require('path')
-var webpack = require('webpack')
+var path = require('path');
+var webpack = require('webpack');
 const buildPath = path.resolve(__dirname, 'src/www');
 
 module.exports = {
