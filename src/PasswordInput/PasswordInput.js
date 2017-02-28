@@ -15,10 +15,11 @@ class PasswordInput extends React.Component {
     this.toggleShowPassword = this.toggleShowPassword.bind(this);
   }
 
-  toggleShowPassword() {
+  toggleShowPassword(event) {
     this.setState((prevState) => {
       return { showPassword: !prevState.showPassword };
     });
+    event.preventDefault();
   }
 
   // Default calculateScore method.

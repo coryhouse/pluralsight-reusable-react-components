@@ -17,3 +17,17 @@ th {
 td {
   padding: 5px;
 }
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#navigation {
+  float: left;
+  width: 175px;
+}
+
+a:visited {
+  color: #666666;
+}

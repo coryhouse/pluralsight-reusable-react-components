@@ -35,8 +35,8 @@ export default class Docs extends React.Component {
     //const dirs = p => fs.readdirSync(p).filter(f => fs.statSync(p+"/"+f).isDirectory())
     return (
       <div>
-        <div style={{float: 'left', width: 200}}>
-          <ul>
+        <div id="navigation">
+          <ul className="unstyled">
             <li><a href="#" onClick={(event) => this.setPage(event, 'PasswordInput')}>PasswordInput</a></li>
             <li><a href="#" onClick={(event) => this.setPage(event, 'ProgressBar')}>ProgressBar</a></li>
           </ul>
