@@ -22,11 +22,16 @@ class Example extends React.Component {
     const {showCode} = this.state;
     const info = parse(code);
     return (
-      <div>
+      <div className="example-wrapper">
         <p>{info.description}</p>
         {children}
-        <a href="#" onClick={this.toggleCode.bind(this)}>
-          {showCode ? "Hide" : "Show"} Code</a>
+
+        <p>
+          <a href="#" onClick={this.toggleCode.bind(this)}>
+            {showCode ? "Hide" : "Show"} Code
+          </a>
+        </p>
+
         {showCode && <pre>{code}</pre>}
       </div>
     )

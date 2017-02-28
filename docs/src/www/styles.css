@@ -1,0 +1,19 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #666666;
+}
+
+.example-wrapper {
+  border: solid 1px #d3d3d3;
+  margin: 10px;
+  padding: 10px;
+  background-color: #f4f6f9;
+}
+
+th {
+  text-align: left;
+}
+
+td {
+  padding: 5px;
+}

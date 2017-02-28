@@ -70,7 +70,7 @@ class PasswordInput extends React.Component {
             showQuality && password.length > 0 && <ProgressBar percent={score} />
           }
         </div>
-        <div style={{ float: 'left', width: 300 }}>
+        <div style={{ float: 'left'}}>
           {
             showTips && password.length > 0 &&
             <ul className="unstyled">

@@ -1,7 +1,4 @@
 import React from 'react';
-// Note that the handy index.js in each component folder gives me a handy shortcut
-// to avoid having to type the name of the component twice below (once for folder
-// and once for filename.)
 import PasswordInput from 'pluralsight-ui/PasswordInput';
 
 /**
