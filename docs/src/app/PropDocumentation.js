@@ -9,7 +9,7 @@ const PropDocumentation = ({props}) => {
   }
 
   return (
-    <table>
+    <table className="props">
       <thead>
         <tr>
           <th>Name</th>
@@ -26,7 +26,7 @@ const PropDocumentation = ({props}) => {
               <td>{key}</td>
               <td>{props[key].description}</td>
               <td>{props[key].type.name}</td>
-              <td>{props[key].required}</td>
+              <td>{props[key].required && "X"}</td>
             </tr>
           );
         })

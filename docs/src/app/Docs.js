@@ -16,7 +16,7 @@ export default class Docs extends React.Component {
 
   setPage(event, page) {
     event.preventDefault();
-    this.setState({page: page});
+    this.setState({page});
   }
 
   getPage() {
@@ -42,7 +42,7 @@ export default class Docs extends React.Component {
           </ul>
        </div>
 
-        <div style={{float: 'left'}}>
+        <div id="page-wrapper">
           {this.getPage()}
         </div>
 

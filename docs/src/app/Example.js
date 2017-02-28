@@ -23,7 +23,10 @@ class Example extends React.Component {
     const info = parse(code);
     return (
       <div className="example-wrapper">
-        <p>{info.description}</p>
+        <p>
+          {info.description}
+        </p>
+
         {children}
 
         <p>
