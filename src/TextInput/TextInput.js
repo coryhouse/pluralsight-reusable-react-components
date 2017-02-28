@@ -1,5 +1,8 @@
 import React, {PropTypes} from 'react';
 
+/**
+ * Abstraction over text input to enforce consistency in validation and labels
+ */
 const TextInput = ({name, label, onChange, placeholder, value, error, ...props}) => {
   let inputStyle = {};
   if (error && error.length > 0) {
