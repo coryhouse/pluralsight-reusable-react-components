@@ -7,7 +7,7 @@ const ComponentPage = ({name, code, examples}) => {
   const info = parse(code);
 
   return (
-    <div>
+    <div id="page-wrapper">
       <Title render={(previousTitle) => `${previousTitle} ${name}`} />
       <h2>{name}</h2>
       <p>{info.description}</p>

@@ -1,5 +1,4 @@
 import React, {PropTypes} from 'react';
-import {parse} from 'react-docgen';
 
 class Example extends React.Component {
   constructor(props) {
@@ -20,10 +19,12 @@ class Example extends React.Component {
   render() {
     const {children, code} = this.props;
     const {showCode} = this.state;
-    const info = parse(code);
     return (
-      <div>
-        <p>{info.description}</p>
+      <div className="example-wrapper">
+        <p>
+          {description}
+        </p>
+
         {children}
         <a href="#" onClick={this.toggleCode.bind(this)}>
           {showCode ? "Hide" : "Show"} Code</a>
@@ -34,7 +35,9 @@ class Example extends React.Component {
 }
 
 Example.propTypes = {
-  code: PropTypes.string.isRequired
+  description: PropTypes.string.isRequired,
+  code: PropTypes.string.isRequired,
+  children: PropTypes.object.isRequired
 }
 
 export default Example;
