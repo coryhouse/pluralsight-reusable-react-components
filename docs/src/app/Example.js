@@ -17,7 +17,7 @@ class Example extends React.Component {
   }
 
   render() {
-    const {children, code} = this.props;
+    const {children, code, description} = this.props;
     const {showCode} = this.state;
     return (
       <div className="example-wrapper">

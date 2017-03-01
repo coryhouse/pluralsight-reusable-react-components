@@ -14,15 +14,15 @@ export default class Docs extends React.Component {
     };
   }
 
-  setCurrentComponent(event, component) {
-    this.setState({currentComponent: component});
+  setCurrentComponent(event, componentName) {
+    const selectedComponent = this.props.components.find(component => component.name == componentName);
+    this.setState({currentComponent: selectedComponent});
     event.preventDefault();
   }
 
   render() {
     const component = this.state.currentComponent;
     const {components} = this.props;
-
     return (
       <div>
         <div id="navigation">
@@ -50,7 +50,7 @@ export default class Docs extends React.Component {
         {
           component.examples.map(example => {
             const ExampleComponent = example.component;
-
+            return <Example key={example.component} description={example.description} code={example.code}><ExampleComponent /></Example>
           })
         }
 

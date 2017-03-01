@@ -26,10 +26,12 @@ const components = [
     examples: [
       {
         component: 'ExampleAllFeatures',
+        description: 'Example desc',
         code: 'code here'
       },
       {
         component: 'ExampleJustToggleVisibility',
+        description: 'Example desc',
         code: 'code here'
       }
     ]
@@ -48,14 +50,17 @@ const components = [
     examples: [
       {
         component: 'Example10Percent',
+        description: 'Example desc',
         code: 'code here'
       },
       {
         component: 'Example70Percent',
+        description: 'Example desc',
         code: 'code here'
       },
       {
         component: 'Example100Percent',
+        description: 'Example desc',
         code: 'code here'
       }
     ]
