@@ -11,10 +11,12 @@
   },
   "private": true,
   "scripts": {
+    "prestart": "npm run gendocs",
     "start": "webpack-dev-server --config webpack-dev-server.config.js --progress --colors --inline",
     "build": "NODE_ENV=docs-production webpack --config webpack-production.config.js --progress --colors --profile",
     "open-build": "NODE_ENV=docs-production webpack-dev-server --config webpack-production.config.js --progress --colors",
-    "gh-pages:build": "node ./gh-pages-build.js"
+    "gh-pages:build": "node ./gh-pages-build.js",
+    "gendocs": "node ./docDataGenerator.js"
   },
   "dependencies": {
     "babel-polyfill": "^6.16.0",

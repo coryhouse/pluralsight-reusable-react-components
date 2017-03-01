@@ -2,14 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Docs from './Docs';
 import {parse} from 'react-docgen';
-// const fs = require('fs')
-// const path = require('path')
-//const currentPath = path.resolve(__dirname, file);
-
-// function getDirectories (srcpath) {
-//   return fs.readdirSync(srcpath)
-//     .filter(file => fs.statSync(path.join(srcpath, file)).isDirectory())
-// }
 
 const components = [
   {
