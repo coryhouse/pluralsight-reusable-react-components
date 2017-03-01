@@ -1,45 +1,61 @@
 var fs = require('fs');
 var path = require('path');
 var chalk = require('chalk');
+var {parse} = require('react-docgen')
 
-const examplesPath = path.join(__dirname, 'src', 'app', 'examples');
-
-// The object we'll stringify to a file
-const examples = [];
-
-function getDirectories (srcpath) {
+function getDirectories(srcpath) {
   return fs.readdirSync(srcpath).filter(file => fs.statSync(path.join(srcpath, file)).isDirectory())
 }
 
-function getFiles (srcpath) {
+function getFiles(srcpath) {
   return fs.readdirSync(srcpath).filter(file => fs.statSync(path.join(srcpath, file)).isFile())
 }
 
-const exampleFolders = getDirectories(examplesPath);
-
-exampleFolders.map(dir => {
-  var fullPath = path.join(examplesPath, dir);
-  var files = getFiles(fullPath);
-  const example = {
-    component: dir,
-    examples: []
-  };
-
-  files.map(file => {
-    example.examples.push({
-      component: file,
-      description: 'desc',
-      code: 'code here'
-    });
-  });
-  examples.push(example);
-});
-
-function writeFile(fileContent) {
-  fs.writeFile(path.join(__dirname, 'exampleMetadata.js'), fileContent, function(err) {
-      if (err) return console.log(err);
-      console.log(chalk.green("Example data saved."));
+function writeFile(filename, content) {
+  fs.writeFile(path.join(__dirname, filename), content, function (err) {
+    if (err) return console.log(err);
+    console.log(chalk.green("Example data saved."));
   });
 }
 
-writeFile("exports = " + JSON.stringify(examples));
+function readFile(filePath) {
+  fs.readFile(filePath, { encoding: 'utf-8' }, function (err, data) {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log(data);
+      return data;
+    }
+  });
+}
+
+function generate(componentsPath, examplesPath) {
+  // The object we'll stringify to a file
+  const componentMetaData = [];
+  const exampleFolders = getDirectories(examplesPath);
+
+  exampleFolders.map(dir => {
+    var fullPath = path.join(examplesPath, dir);
+    var files = getFiles(fullPath);
+    const example = {
+      component: dir, // by convention, each folder of examples should be named after the component.
+      examples: []
+    };
+
+    files.map(file => {
+      example.examples.push({
+        component: file,
+        path: fullPath,
+        description: 'desc',
+        code: 'code here'
+      });
+    });
+    componentMetaData.push(example);
+  });
+
+  writeFile('componentMetadata.js', "exports = " + JSON.stringify(componentMetaData));
+}
+
+const examplesPath = path.join(__dirname, 'src', 'app', 'examples');
+const componentsPath = path.join(__dirname, '../src', 'app', 'examples');
+generate(componentsPath, examplesPath);
