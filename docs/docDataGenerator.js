@@ -18,13 +18,12 @@ function writeFile(filename, content) {
   });
 }
 
-function readFile(filePath) {
+function readFile(filePath, callback) {
   fs.readFile(filePath, { encoding: 'utf-8' }, function (err, data) {
     if (err) {
       console.log(err);
     } else {
-      console.log(data);
-      return data;
+      callback(data);
     }
   });
 }
@@ -43,11 +42,16 @@ function generate(componentsPath, examplesPath) {
     };
 
     files.map(file => {
+      let code = '';
+      readFile(path.join(examplesPath, dir, file), content => {
+        code = content;
+      });
+      console.log(code);
       example.examples.push({
         component: file,
         path: fullPath,
         description: 'desc',
-        code: 'code here'
+        code: code
       });
     });
     componentMetaData.push(example);
@@ -57,5 +61,5 @@ function generate(componentsPath, examplesPath) {
 }
 
 const examplesPath = path.join(__dirname, 'src', 'app', 'examples');
-const componentsPath = path.join(__dirname, '../src', 'app', 'examples');
+const componentsPath = path.join(__dirname, '../src');
 generate(componentsPath, examplesPath);
