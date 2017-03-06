@@ -1,7 +1,7 @@
 {
   "name": "pluralsight-reusable-react-components",
   "description": "Reusuable React Components",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Cory House (housecor@gmail.com)",
   "private": true,
   "main": "build/index.js",
